@@ -1,3 +1,4 @@
+import 'package:app1/widgets/formulaire.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -10,7 +11,7 @@ class AcademyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ExoButtons(),
+      body: Formulaire(),
     );
   }
 }
