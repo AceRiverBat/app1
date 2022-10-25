@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       getPages: [
         GetPage(
-          name: "Exo4",
+          name: "/Exo4",
           page: (() => const GetxView()),
           binding: GetxBindings(),
         )
