@@ -93,12 +93,20 @@ class _FormulaireState extends State<Formulaire> {
                 ),
                 const Text('Rester connecté',
                     style: TextStyle(fontWeight: FontWeight.w600)),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 90),
-                  child: Text('Mot de passe oublié ?',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          decoration: TextDecoration.underline)),
+                  child: GestureDetector(
+                    onTap: () {
+                      const snackBar = SnackBar(
+                          content: Text('Le mot de passe est "1234"'),
+                          backgroundColor: Colors.red);
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
+                    child: const Text('Mot de passe oublié ?',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            decoration: TextDecoration.underline)),
+                  ),
                 )
               ],
             ),
