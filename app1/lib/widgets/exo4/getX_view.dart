@@ -9,8 +9,34 @@ class GetxView extends GetView<GetXController> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          controller.incrementCounter();
+          controller.addWordToList();
+        },
+      ),
+      body: Center(
+          child: Column(
+        children: [
+          Obx(
+            () => Text(
+              "Nbr de mots ajoutés : ${controller.count.value}",
+              style: const TextStyle(fontSize: 30),
+            ),
+          ),
+          Obx(
+            () => Row(
+              children: List.generate(
+                controller.wordlist.length,
+                (index) {
+                  return Text("${controller.wordlist[index]},");
+                },
+              ),
+            ),
+          ),
+        ],
+      )),
     );
   }
 }
