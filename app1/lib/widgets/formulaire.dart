@@ -84,6 +84,7 @@ class _FormulaireState extends State<Formulaire> {
               children: [
                 Checkbox(
                   checkColor: Colors.white,
+                  activeColor: Colors.red,
                   value: isChecked,
                   onChanged: (bool? value) {
                     setState(() {
